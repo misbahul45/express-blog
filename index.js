@@ -15,6 +15,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //routes
+app.use('/',(req, res)=>{
+    res.json({message:"hello world"})
+})
 app.use("/api/users", userRouter)
 app.use("/api/auth", authRouter)
 app.use("/api/posts", postRouter)
