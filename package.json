@@ -5,11 +5,7 @@
   "scripts": {
     "dev": "node index.js",
     "start": "node index.js",
-    "build": {
-      "use": "vercel build",
-      "installCommand": "npm install",
-      "buildCommand": "npm run build"
-    }, 
+    "build": "npm install && npm run prisma:generate && echo 'Build step here'",
     "prisma:generate": "prisma generate"
   },
   "keywords": [],
