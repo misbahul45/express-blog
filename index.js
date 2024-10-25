@@ -24,6 +24,8 @@ app.listen(PORT,()=>{
     console.log("backend server is running on port",PORT)   
 })
 
+module.exports = app;
+
 
 
 app.use((err,req,res,next)=>{
