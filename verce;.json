@@ -6,8 +6,18 @@
       "use": "@vercel/node"
     }
   ],
-  "env": {
-    "NODE_ENV": "production"
-  },
-  "buildCommand": "npm install && npm run build"
+  "routes": [
+    {
+      "src": "/images/(.*)",
+      "dest": "/public/images/$1"
+    },
+    {
+      "src": "/styles/(.*)",
+      "dest": "/public/styles/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ]
 }
