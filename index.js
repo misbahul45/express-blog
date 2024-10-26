@@ -1,6 +1,7 @@
 const express = require("express");
 const cookieParser = require('cookie-parser');
 const path = require('path');
+const cors = require('cors')
 
 // Use proper path resolution for routes
 const userRouter = require("./routes/user.route");
@@ -10,6 +11,8 @@ const commentRouter = require('./routes/comment.route');
 const likeRouter = require('./routes/like.route');
 
 const app = express();
+
+app.use(cors())
 
 // Middleware
 app.use(express.json());
